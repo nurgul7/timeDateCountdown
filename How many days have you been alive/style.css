@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    box-shadow: 10px 10px 15px 10px rgb(109, 34, 34);
+    width: 280px;
+    height: 400px;
+    margin: 100px auto;
+    background: rgba(148, 128, 138, 0.074);
+    color: white;
+    border-radius: 15px;
+    /* margin-bottom: 0px; */
+    margin-top: 50px;
+    border: 0px solid rgb(109, 34, 34);
+}
+
+.row {
+    margin: 5px;
+}
+
+.baslik {
+    padding: 5px;
+    text-align: center;
+}
+
+.kutu1 {
+    margin-top: 20px;
+    margin-left: 55px;
+}
+
+input {
+    width: 50px;
+    height: 45px;
+    border-radius: 50%;
+    border-style: none;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.buton {
+    height: 40px;
+    width: 150px;
+    border-radius: 20px;
+    border-style: none;
+    margin: auto;
+    background: bisque;
+    color: rgba(109, 34, 34, 0.914);
+}
+
+button:hover {
+    background-color: rgba(109, 34, 34, 0.914);
+    color: bisque;
+}
+
+.sonuc {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    text-align: center;
+    margin-left: 14px;
+    text-align: center;
+    margin-top: -15px;
+    /* margin-bottom: 20px; */
+    background-color: bisque;
+    scale: 1.3;
+    color: rgba(109, 34, 34, 0.977);
+}
+
+.sonuc:hover {
+    background-color: rgba(109, 34, 34, 0.434);
+    color: bisque;
+}
+
+
+/*  effect code*/
+
+.kinetic {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    z-index: 0;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+.kinetic::after,
+.kinetic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: 50px solid transparent;
+    border-radius: 50%;
+    border-bottom-color: rgb(65, 40, 40);
+    animation: rotateA 2s linear infinite 0.5s;
+}
+
+.kinetic::before {
+    transform: rotate(90deg);
+    animation: rotateB 2s linear infinite;
+}
+
+@keyframes rotateA {
+    0%,
+    25% {
+        transform: rotate(0deg);
+    }
+    50%,
+    75% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateB {
+    0%,
+    25% {
+        transform: rotate(90deg);
+    }
+    50%,
+    75% {
+        transform: rotate(270deg);
+    }
+    100% {
+        transform: rotate(450deg);
+    }
+}
+
+span {
+    position: absolute;
+    top: 30px;
+    z-index: 1;
+}
